@@ -1,0 +1,18 @@
+{
+  "description": "Enumeration for species of animal using English names. Previous ADE definitions used a mixture of English and Genus names.",
+
+  "type": "string",
+
+  "enum": [
+    "Buffalo",
+    "Cattle",
+    "Deer",
+    "Elk",
+    "Goat",
+    "Horse",
+    "Pig",
+    "Sheep",
+    "Camel",
+    "Kangaroo"
+  ]
+}

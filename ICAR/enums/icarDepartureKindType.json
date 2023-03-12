@@ -1,0 +1,21 @@
+{
+  "description": "Enumeration for the kind of departure. Type of destination or transfer.",
+
+  "type": "string",
+
+  "enum": [
+    "InternalTransfer",
+    "Export",
+    "Slaughter",
+    "Newborn",
+    "StudService",
+    "StudServiceReturn",
+    "Agistment",
+    "AgistmentReturn",
+    "Show",
+    "ShowReturn",
+    "Sale",
+    "SaleReturn",
+    "Other"
+  ]
+}

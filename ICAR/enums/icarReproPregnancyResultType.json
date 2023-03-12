@@ -1,0 +1,12 @@
+{
+  "description": "The result of pregnancy diagnosis (empty/pregnant).",
+
+  "type": "string",
+
+  "enum": [
+    "Empty",
+    "Pregnant",
+    "Multiple",
+    "Unknown"
+  ]
+}

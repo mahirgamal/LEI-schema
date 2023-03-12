@@ -1,0 +1,25 @@
+{
+  "description": "Enumeration of the icar messages.",
+
+  "type": "string",
+
+  "enum": [
+    "MilkingVisits",
+    "TestDayResults",
+    "Births",
+    "Deaths",
+    "Arrivals",
+    "Departures",
+    "Animals",
+    "PregnancyChecks",
+    "Heats",
+    "DryingOffs",
+    "Inseminations",
+    "Abortions",
+    "Parturitions",
+    "MatingRecommendations",
+    "Devices",
+    "Weights",
+    "Other"
+  ]
+}

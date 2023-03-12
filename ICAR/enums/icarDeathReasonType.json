@@ -1,0 +1,24 @@
+{ 
+  "description": "Enumeration for death reason. Not specified in previous ADE data dictionary.",
+  
+  "type": "string",
+
+  "enum": [
+    "Missing",
+    "Parturition",
+    "Disease",
+    "Accident",
+    "Consumption",
+    "Culled",
+    "Other",
+    "Unknown",
+    "Age",
+    "Mastitis",
+    "Production",
+    "LegOrClaw",
+    "MilkingAbility",
+    "Nutrition",
+    "Fertility",
+    "Injured"
+  ]
+}

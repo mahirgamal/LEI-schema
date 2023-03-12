@@ -1,0 +1,12 @@
+{
+  "description": "the type of recommendation (SireRecommended, RecommendationImpossible, BeefSire, NoBreedingSire",
+
+  "type": "string",
+
+  "enum": [
+    "SireRecommended",
+    "RecommendationImpossible",
+    "BeefSire",
+    "NoBreedingSire"
+  ]
+}
