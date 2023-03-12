@@ -1,0 +1,63 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Audit",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "",
+          "scheme": ""
+        },
+        "specie": "Cattle",
+        "gender": "Unknown"
+      }
+    },
+    "event": [
+      {
+        "specie": "Cattle",
+        "breed": "Cows",
+        "stock": 100,
+        "note": ""
+      },
+      {
+        "specie": "Cattle",
+        "breed": "Heifers",
+        "stock": 0,
+        "note": ""
+      },
+      {
+        "specie": "Cattle",
+        "breed": "Steers",
+        "stock": 3,
+        "note": "found 3"
+      },
+      {
+        "specie": "Cattle",
+        "breed": "Bulls",
+        "stock": 28,
+        "note": ""
+      },
+      {
+        "specie": "Cattle",
+        "breed": "Bulls calves",
+        "stock": 50,
+        "note": ""
+      }
+    ]
+  },
+  "eventDateTime": "2021-02-08T16:13:23Z"
+}

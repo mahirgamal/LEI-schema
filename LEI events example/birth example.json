@@ -1,0 +1,40 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Birth",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "78975",
+      "totalInSession": 58
+    },
+    "event": {
+      "registrationReason": "Born",
+      "EID": "",
+      "VID": "1-1dec2021"
+    }
+  },
+  "eventDateTime": "2021-12-01T13:35:25Z"
+}

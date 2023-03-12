@@ -1,0 +1,40 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "StatusObserved",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "123",
+      "totalInSession": 100
+    },
+    "event": {
+      "observedStatus": "Injured",
+      "note": "found 1 of the steers was injured on the truck and needs to be euthanized RFID: 600 000000000199",
+      "responsible": "John"
+    }
+  },
+  "eventDateTime": "2021-02-05T14:13:23Z"
+}

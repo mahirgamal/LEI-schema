@@ -1,0 +1,47 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "PregnancyCheck",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "6454456",
+      "totalInSession": 20
+    },
+    "event": {
+      "checkMethod": "Palpation",
+      "result": "Pregnant",
+      "foetalAge": 21,
+      "foetusCount": 1,
+      "foetusCountMale": 1,
+      "foetusCountFemale": 0,
+      "exceptions": [
+        "normal",
+        "due on OCT"
+      ]
+    }
+  },
+  "eventDateTime": "2021-03-05T07:30:23Z"
+}

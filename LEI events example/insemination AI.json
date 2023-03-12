@@ -1,0 +1,60 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Insemination",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "11871198",
+      "totalInSession": 55
+    },
+    "event": {
+      "rank": 3,
+      "inseminationType": "Insemination",
+      "sireIdentifiers": [
+        {
+          "id": "rfid",
+          "scheme": "132412313"
+        },
+        {
+          "id": "rfid",
+          "scheme": "98797097"
+        }
+      ],
+      "sireOfficialName": "",
+      "sireURI": "",
+      "straw": {
+        
+      },
+      "eventEndDateTime": "2021-03-03T07:30:23Z",
+      "semenFromFarmStocks": true,
+      "farmContainer": "125a 2021-01-03",
+      "embryo": {
+        
+      }
+    }
+  },
+  "eventDateTime": "2021-03-03T07:30:23Z"
+}

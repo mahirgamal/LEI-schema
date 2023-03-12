@@ -1,0 +1,64 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Synchronisation",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "24862",
+      "totalInSession": 35
+    },
+    "event": {
+      "medicine": {
+        "name": "Dectomax pour",
+        "approved": "",
+        "registeredID": {
+          "id": "",
+          "scheme": ""
+        }
+      },
+      "procedure": "injection",
+      "batches": [
+        {
+          "id": "1122346T",
+          "expiryDate": "2022-11-04T00:00:00Z"
+        }
+      ],
+      "withdrawals": [
+        {
+          "productType": "Vaccination",
+          "endDate": "2022-02-17T07:30:23Z"
+        }
+      ],
+      "dose": {
+        "doseQuantity": 100,
+        "doseUnits": "MLT"
+      },
+      "site": "shoulder",
+      "responsible": " Jacob Bridges 0400 357 951"
+    }
+  },
+  "eventDateTime": "2022-01-08T13:35:25Z"
+}

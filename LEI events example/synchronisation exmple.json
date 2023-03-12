@@ -1,0 +1,64 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Synchronisation",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Female"
+      }
+    },
+    "session": {
+      "sessionID": "11871156",
+      "totalInSession": 55
+    },
+    "event": {
+      "insertionDate": "2021-03-03T07:30:23Z",
+      "id": "Av897",
+      "brand": "cue mate",
+      "hormone": [
+        {
+          "name": "progesterone",
+          "quantity": 11.5,
+          "unit": "GRM"
+        },
+        {
+          "name": "estrogen",
+          "quantity": 7.5,
+          "unit": "GRM"
+        }
+      ],
+      "note": "used type a",
+      "withdrawals": [
+        {
+          "productType": "Intercourse",
+          "endDate": "2021-03-07T07:30:23Z"
+        },
+        {
+          "productType": "Vaccination",
+          "endDate": "2021-04-03T07:30:23Z"
+        }
+      ],
+      "responsible": "Peter - Artificial Breeding Services CO."
+    }
+  },
+  "eventDateTime": "2021-03-03T07:30:23Z"
+}

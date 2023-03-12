@@ -1,0 +1,105 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Location",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "4545",
+      "totalInSession": 1
+    },
+    "event": {
+      "id": "Ax123",
+      "version": "1.1.0 beta",
+      "manufacturer": {
+        "id": "Ceres tag",
+        "deviceType": "ear tag",
+        "deviceName": "ct (cattel tag)"
+      },
+      "location": [
+        {
+          "id": "59.102.101.113",
+          "scheme": "request"
+        },
+        {
+          "id": "Sydney",
+          "scheme": "city"
+        },
+        {
+          "id": "New South Wales",
+          "scheme": "region"
+        },
+        {
+          "id": "NSW",
+          "scheme": "regionCode"
+        },
+        {
+          "id": "AU",
+          "scheme": "countryCode"
+        },
+        {
+          "id": "Australia",
+          "scheme": "countryName"
+        },
+        {
+          "id": "20",
+          "scheme": "locationAccuracyRadius"
+        },
+        {
+          "id": "Australia/Sydney",
+          "scheme": "timezone"
+        },
+        {
+          "id": "AUD",
+          "scheme": "currencyCode"
+        },
+        {
+          "id": "-33.8591",
+          "scheme": "latitude"
+        },
+        {
+          "id": "151.2002",
+          "scheme": "longitude"
+        },
+        {
+          "id": "2200",
+          "scheme": "zipcode"
+        },
+        {
+          "id": "Bankstown",
+          "scheme": "subrub"
+        }
+      ]
+    },
+    "GeoLocation": {
+      "type": "Point",
+      "coordinates": [
+        150.7937,
+        -33.7984
+      ]
+    }
+  },
+  "eventDateTime": "2022-04-28T14:13:23Z"
+}

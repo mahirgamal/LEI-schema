@@ -1,0 +1,43 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Death",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "8756",
+      "totalInSession": 25
+    },
+    "event": {
+      "deathReason": "Slaughter",
+      "deathReason": "Production",
+      "explanation": "production",
+      "disposalMethod": "ApprovedService",
+      "disposalOperator": "Paul",
+      "disposalReference": "s147987"
+    }
+  },
+  "eventDateTime": "2021-03-01T09:53:23Z"
+}

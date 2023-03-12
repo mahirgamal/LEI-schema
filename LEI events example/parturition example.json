@@ -1,0 +1,52 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Parturition",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "6454456",
+      "totalInSession": 20
+    },
+    "event": {
+      "isEmbryoImplant": false,
+      "damParity": 1,
+      "liveProgeny": 1,
+      "totalProgeny": 1,
+      "calvingEase": "DifficultVeterinaryCare",
+      "progeny": [
+        {
+          "identifier": {
+            "id": "VID",
+            "scheme": "1-1dec2021"
+          },
+          "specie": "Cattle",
+          "gender": "Male"
+        }
+      ]
+    }
+  },
+  "eventDateTime": "2021-12-01T13:35:25Z"
+}

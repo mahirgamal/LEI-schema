@@ -1,0 +1,40 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Castrate",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "357951",
+      "totalInSession": 30
+    },
+    "event": {
+      "castrateMethod": "Surgical",
+      "note": "use a scalpel",
+      "responsible": "Jacob Bridges 0400 357 951"
+    }
+  },
+  "eventDateTime": "2021-12-01T13:35:25Z"
+}

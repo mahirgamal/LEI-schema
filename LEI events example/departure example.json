@@ -1,0 +1,73 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "Departure",
+    "item": {
+      "itemType": "Animal",
+      "animal": {
+        "identifier": {
+          "id": "rfid",
+          "scheme": "123"
+        },
+        "specie": "Cattle",
+        "gender": "Male"
+      }
+    },
+    "session": {
+      "sessionID": "4545",
+      "totalInSession": 50
+    },
+    "event": {
+      "departureKind": "Sale",
+      "departureReason": "Sale",
+      "shipment": {
+        "id": {
+          "scheme": "sale invoice",
+          "id": "123456789"
+        },
+        "origin": {
+          "id": "454877abc",
+          "name": "CSU",
+          "email": "csufarm@csu.edu.au"
+        },
+        "destination": {
+          "id": "cfrg",
+          "name": "UTS",
+          "email": "utsfarm@uts.edu.au"
+        },
+        "vehicles": [
+          "x1234",
+          "y0987"
+        ]
+      },
+      "changeOfOwnerShip": {
+        "lot": {
+          "lotId": "1256"
+        },
+        "purchaser": {
+          "id": "cfrg",
+          "name": "UTS",
+          "email": "utsfarm@uts.edu.au"
+        },
+        "transactionCost": {
+          "currency": "AUD",
+          "totalCost": 1500
+        }
+      }
+    }
+  },
+  "eventDateTime": "2022-04-28T14:13:23Z"
+}
