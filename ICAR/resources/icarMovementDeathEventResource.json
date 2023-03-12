@@ -1,0 +1,41 @@
+{
+  "description": "Event for recording animal death",
+
+  "allOf": [{
+      "$ref": "../resources/icarEventCoreResource.json"
+    },
+    {
+      "type": "object",
+
+      "properties": {
+        "deathReason": {
+          "$ref": "../enums/icarDeathReasonType.json",
+          "description": "Coded reasons for death including disease, parturition complications, consumption by humans or animals."
+        },
+        "explanation": {
+          "type": "string",
+          "description": "Free text explanation of the reason for death."
+        },
+        "disposalMethod": {
+          "$ref": "../enums/icarDeathDisposalMethodType.json",
+          "description": "Coded disposal methods including approved service, consumption by humans or animals, etc."
+        },
+        "disposalOperator": {
+          "type": "string",
+          "description": "Disposal operator official name (should really be schema.org/organization)."
+        },
+        "disposalReference": {
+          "type": "string",
+          "description": "Reference (receipt, docket, or ID) for disposal."
+        },
+        "consignment": {
+          "$ref": "../types/icarConsignmentType.json"
+        },        
+        "deathMethod": {
+          "$ref": "../enums/icarDeathMethodType.json",
+          "description": "Defines the method of death, including an accident, natural causes, or euthanised."
+        }        
+      }
+    }
+  ]
+}

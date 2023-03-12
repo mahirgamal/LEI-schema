@@ -1,0 +1,8 @@
+{
+  "description": "Records that the animal has been dried off from milking. If necessary, also record a separate health treatment event.",
+
+  "allOf": [{
+      "$ref": "../resources/icarEventCoreResource.json"
+    }
+  ]
+}

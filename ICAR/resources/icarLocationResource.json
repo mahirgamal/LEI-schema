@@ -1,0 +1,38 @@
+{
+  "description": "An  location scheme / location id combinations.",
+
+  "allOf": [
+    {
+      "$ref": "icarResource.json"
+    }, 
+    {
+      "type": "object",
+
+      "required": [
+        "identifier"
+      ],
+
+      "properties": {
+        "identifier": {
+          "$ref": "../types/icarLocationIdentifierType.json",
+          "description": "Unique location scheme and identifier combination."
+        },
+        "alternativeIdentifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "../types/icarLocationIdentifierType.json"
+          },
+          "description": "Alternative identifiers for the location. Must be a 1:1 mapping, meaning that when querying resources with an alternative identifier (instead of the 'main' identifier), the response may not be different."
+        },
+        "name": {
+          "type": "string",
+          "description": "The human readable name of the location."
+        },
+        "timeZoneId": {
+          "type": "string",
+          "description": "The time zone ID of the location according to the IANA time zone database (https://www.iana.org/time-zones), e.g. Europe/Paris. Can be used to convert UTC times in events, resources etc. back to the locations time zone while also taking daylight saving times into account."
+        }
+      }
+    }
+  ]
+}

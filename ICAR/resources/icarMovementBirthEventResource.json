@@ -1,0 +1,24 @@
+{
+  "description": "Event for recording animal birth",
+
+  "allOf": [{
+      "$ref": "../resources/icarEventCoreResource.json"
+    },
+    {
+      "type": "object",
+
+      "required": [
+        "location"
+      ],
+
+      "properties": {
+        "registrationReason": {
+          "$ref": "../enums/icarRegistrationReasonType.json"
+        },
+        "animalDetail": {
+          "$ref": "../resources/icarAnimalCoreResource.json"
+        }
+      }
+    }
+  ]
+}

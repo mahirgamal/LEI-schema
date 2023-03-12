@@ -1,0 +1,19 @@
+{
+  "description": "The do not breed event records an observation that an animal has been assigned not to be bred. There are no other parameters.",
+
+  "allOf": [{
+      "$ref": "../resources/icarEventCoreResource.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "doNotBreed": {
+          "type": "boolean",
+          "description": "Set this attribute to true if the animal should not be bred, false if it may now be bred.",
+          "nullable": true,
+          "default": true
+        }
+      }
+    }
+  ]
+}
