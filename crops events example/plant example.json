@@ -1,0 +1,31 @@
+{
+  "source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  },
+  "owner": {
+    "id": "454877abc",
+    "name": "CSU",
+    "email": "abcfarm@abc.edu.au",
+    "givenName": "ABC",
+    "familyName": "XYZ"
+  },
+  "message": {
+    "eventName": "tree",
+    "item": {
+      "itemType": "Crop",
+      "crop": {
+        "xyz": "123"
+      }
+    },
+    "session": {
+      "sessionID": "4545",
+      "totalInSession": 1
+    },
+    "event": ""
+  },
+  "eventDateTime": "2022-04-28T14:13:23Z"
+}
