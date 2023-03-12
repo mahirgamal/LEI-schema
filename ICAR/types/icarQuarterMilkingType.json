@@ -1,0 +1,51 @@
+{
+  "description": "",
+
+  "type": "object",
+
+  "properties": {
+    "icarQuarterId": {
+      "type": "string",
+      "description": "the unique id of the quarter milking",
+      "enum": [
+        "LF",
+        "RF",
+        "LR",
+        "RR"
+      ]
+    },
+    "xposition": { 
+      "type": "number",
+      "nullable": true,
+      "description": "Optional milking robot X position. Vendors may choose not to provide this."
+    },
+    "yposition": { 
+      "type": "number",
+      "nullable": true,
+      "description": "Optional milking robot Y position. Vendors may choose not to provide this."
+    },
+    "zposition": { 
+      "type": "number",
+      "nullable": true,
+      "description": "Optional milking robot Z position. Vendors may choose not to provide this."
+    },
+    "quarterMilkingDuration": {
+      "$ref": "../types/icarMilkDurationType.json"
+    },
+    "quarterMilkingWeight": {
+      "$ref": "../types/icarMilkingMilkWeightType.json"
+    },
+    "icarQuarterMilkingSample": {
+      "type": "array",
+      "items": {
+        "$ref": "../types/icarQuarterMilkingSampleType.json"
+      }
+    },
+    "icarQuarterCharacteristics": {
+      "type": "array",
+      "items": {
+        "$ref": "../types/icarMilkCharacteristicsType.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Location identifier based on a scheme and ID.",
+
+  "allOf": [{
+    "$ref": "../types/icarIdentifierType.json"
+  }]
+}

@@ -1,0 +1,40 @@
+{
+  "description": "Generic meta data on this event",
+
+  "type": "object",
+
+  "required": [
+    "source",
+    "modified"
+  ],
+
+  "properties": {
+    "source": {
+      "type": "string",
+      "description": "Source where data is retrieved from. URI  or reverse DNS that identifies the source system."
+    },
+    "sourceId": {
+      "type": "string",
+      "description": "Unique Id (ideally UUID) for the resource in the original source system. Treat source and sourceId as an icarIdentifierType."
+    },
+    "modified": {
+      "$ref": "../types/icarDateTimeType.json"
+    },
+    "created": {
+      "$ref": "../types/icarDateTimeType.json",
+      "nullable": true
+    },
+    "creator": {
+      "type": "string",
+      "description": "Person or organisation who created the object"
+    },
+    "validFrom": {
+      "$ref": "../types/icarDateTimeType.json",
+      "nullable": true
+    },
+    "validTo": {
+      "$ref": "../types/icarDateTimeType.json",
+      "nullable": true
+    }
+  }
+}
