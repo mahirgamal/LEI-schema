@@ -1,0 +1,43 @@
+{
+    "description": "Use this type to define a parent of an animal.",
+    "required": [
+        "parentOf",
+        "gender",
+        "identifier"
+    ],
+
+    "type": "object",    
+
+    "properties": {
+        "parentOf": {
+            "$ref": "icarAnimalIdentifierType.json",
+            "description": "References the child of this parent (allowing you to build multi-generation pedigrees)."
+        },
+        "gender": {
+            "$ref": "icarAnimalGenderType.json",
+            "description": "Specifies Male or Female gender so you can recognise Sire or Dam."
+        },    
+        "relation": {
+            "$ref": "icarAnimalRelationType.json",
+            "description": "Identifies type of parent: Genetic (default), Recipient, Adoptive (Foster/Rearing)."
+        },              
+        "identifier": {
+            "$ref": "icarAnimalIdentifierType.json",
+            "description": "Unique animal scheme and identifier combination."
+          },
+        "officialName": {
+            "type": "string",
+            "description": "Official herdbook name." 
+        },
+        "parentageAssessedMethod": {
+            "type": "string",
+            "enum": ["Observed", "Associated", "Derived", "DNA"],
+            "description": "Observed (e.g. Dam observed giving birth to progeny), Associated (e.g. Dam seen feeding progeny), Derived (e.g. Sire derived from mating records), DNA (the result of a DNA parentage test)"
+        },
+        "DNAProbability": {
+            "type": "number",
+            "format": "double",
+            "description": "The calculated likelihood or degree of probability resulting from DNA test analysis expressed in %"
+        }
+    }
+}

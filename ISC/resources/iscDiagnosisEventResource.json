@@ -1,0 +1,25 @@
+{
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "required": [],
+            "type": "object",
+            "properties": {
+                "responsible": {
+                    "type": "string",
+                    "description": "Person responsible for the diagnosis"
+                },
+                "diagnoses": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "$ref": "iscDiagnosisType.json"
+                    },
+                    "description": "This object describes the health condition diagnoses"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "properties": {
+        "eventName": {
+            "type": "string",
+            "description": "Name of the trading (sale or purchase) event."
+        },
+        "eventReference": {
+            "type": "object",
+            "$ref": "iscTradingEventIdentifierType.json",
+            "description": "Event reference using the scheme and ID method (e.g. auctionsplus.com.au, #15263)."
+        },
+        "vendor": {
+            "type": "object",
+            "$ref": "iscOrganistionType.json",
+            "description": "Details of the vender selling the stock"
+        },
+        "purchaser": {
+            "type" : "object",
+            "$ref": "iscOrganisationType.json",
+            "description": "Details of the buyer purchasing the stock"
+        },
+        "lotId": {
+            "type": "string",
+            "description": "Lot Identification number in the sale"
+        },
+        "description": {
+            "type": "string",
+            "description": "Lot description"
+        },
+        "accreditations": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "any accreditation's that are applicable to the lot"
+        },
+        "locations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "icarLocationIdentifierType.json"
+            },
+            "description": "Locations from where the stock are"
+        },
+        "agent": {
+            "type": "object",
+            "$ref": "iscOrganistionType.json",
+            "description": "Agent details for the lot"
+        },
+        "assessments": {
+            "type": "array",
+            "items": {
+                "$ref": "iscLotAssessmentType.json"
+            },
+            "description": "A set of assessments for the animal(s) in the lot."
+        },
+        "sellingBasis": {
+            "$ref": "iscSellingBasisType.json",
+            "description": "Basis on which the stock was sold"
+        }
+    }
+}

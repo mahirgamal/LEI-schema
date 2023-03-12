@@ -1,0 +1,27 @@
+{
+    "allOf": [
+        {
+            "$ref": "icarEventCoreResource.json"
+        },
+        {
+            "required": ["arrivalReason", "animalDetail"],
+            "type": "object",
+            "properties": {
+                "arrivalReason":{
+                    "type": "object",
+                    "$ref": "icarArrivalReasonType.json",
+                    "description": "Enumeration for arrival reason"
+                },
+                "animalDetail": {
+                    "type": "object",
+                    "$ref": "icarAniomalCourResource",
+                    "description": "Covered in Animal Identification and life data schema. Refer: https://github.com/adewg/ICAR/blob/master/Release%20Candidate%20Messages/icarAnimalCoreResource.json"
+                },
+                "consignment": {
+                    "type": "object",
+                    "$ref": "icarCOnsignmentType.json"
+                }
+            }
+        }
+    ]
+}
