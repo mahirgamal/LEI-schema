@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "description": "The device or software that the event originates from.",
+  "type": "object",
+  "required": [
+    "itemType"
+  ],
+  "properties": {
+    "itemType": {
+      "type": "string",
+      "$ref": "itemsTypes.json",
+      "description": "Unique identifier item type."
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "animal"
+      ],
+      "properties": {
+        "itemType": {
+          "const": "Animal"
+        },
+        "animal": {
+          "type": "object",
+          "$ref": "ICAR/resources/icarAnimalCoreResource.json"
+        }
+      }
+    },
+    {
+      "required": [
+        "crop"
+      ],
+      "properties": {
+        "itemType": {
+          "const": "Crop"
+        },
+        "crop": {
+          "type": "object",
+          "$ref": "plant.json"
+        }
+      }
+    },
+    {
+      "required": [
+        "machinery"
+      ],
+      "properties": {
+        "itemType": {
+          "const": "Machinery"
+        },
+        "machinery": {
+          "type": "object",
+          "$ref": "..."
+        }
+      }
+    }
+  ]
+}

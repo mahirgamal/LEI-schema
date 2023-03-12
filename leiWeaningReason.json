@@ -1,0 +1,14 @@
+{
+  "description": "Enumeration for the wean reason.",
+  "type": "string",
+  "enum": [
+    "Weight",
+    "Condition",
+    "Feed ",
+    "Age",
+    "Production",
+    "Other ",
+    "Unknown",
+    "Sick"
+  ]
+}

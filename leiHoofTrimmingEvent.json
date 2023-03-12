@@ -1,0 +1,30 @@
+{
+  "description": "The Hoof Trimming event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "type": "string",
+      "description": "reason of Hoof Trimming"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible Hoof Trimming"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Array of tools that used in trimming."
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

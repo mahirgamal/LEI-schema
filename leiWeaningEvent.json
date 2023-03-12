@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "startdate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO8601 date and time. MUST contain time zone. UTC recommended."
+    },
+    "age": {
+      "type": "integer",
+      "description": "age of animal at weaned in days"
+    },
+    "reason": {
+      "type": "string",
+      "$ref": "leiWeaningReason.json",
+      "description": "reason of wean"
+    },
+    "weaningMethod": {
+      "type": "string",
+      "$ref": "leiWeaningMethod.json",
+      "description": "reason of wean"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "description": "Enumeration for the abortion methods.",
+  "type": "string",
+  "enum": [
+    "normal",
+    "opreation"
+  ]
+}

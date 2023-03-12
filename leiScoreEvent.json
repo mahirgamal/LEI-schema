@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "description": "A body condition score observation for an animal based on the species-specific scoring guide.",
+  "additionalProperties": false,
+  "properties": {
+    "scoreType": {
+      "type": "object",
+      "$ref": "leiScoresTypes.json",
+      "description": "Fat,Condition,Frame,Muscle"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "oneOf": [
+      {
+        "required": [
+          "Score"
+        ],
+        "properties": {
+          "scoreType": {
+            "anyOf": [
+              {
+                "const": "Fat"
+              },
+              {
+                "const": "Condition"
+              },
+              {
+                "const": "FrameCattle"
+              }
+            ]
+          },
+          "Score": {
+            "type": "number",
+            "description": "numric values of the score."
+          }
+        }
+      },
+      {
+        "required": [
+          "Score"
+        ],
+        "properties": {
+          "scoreType": {
+            "anyOf": [
+              {
+                "const": "FrameSheep"
+              },
+              {
+                "const": "Muscle"
+              }
+            ]
+          },
+          "Score": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "description": "alphabetic values of the  score."
+          }
+        }
+      }
+    ]
+  }
+}

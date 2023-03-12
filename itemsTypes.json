@@ -1,0 +1,9 @@
+{
+  "description": "Enumeration for the items types name.",
+  "type": "string",
+  "enum": [
+    "Animal",
+    "Crop",
+    "Machinery"
+  ]
+}

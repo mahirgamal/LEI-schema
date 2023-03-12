@@ -1,0 +1,31 @@
+{
+  "description": " stock check",
+  "required": [
+    "stock"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "animalDetail": {
+      "type": "object",
+      "$ref": "icar/resources/icarAnimalCoreResource.json",
+      "description": "Covered in Animal Identification and life data schema."
+    },
+    "stock": {
+      "type": "integer",
+      "description": " the count number of animales in the yard"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "reason": {
+      "type": "string",
+      "description": "reason of stock check"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

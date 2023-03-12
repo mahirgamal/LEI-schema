@@ -1,0 +1,27 @@
+{
+  "description": "The Pulse Check event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "rate": {
+      "type": "integer",
+      "description": "per minute, heart rate of between 48 and 84 beats per minute"
+    },
+    "reason": {
+    "type": "string",
+    "description": "reason of measuring"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for measuring"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

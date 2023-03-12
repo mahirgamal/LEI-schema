@@ -1,0 +1,34 @@
+{
+  "description": "The Horn Tipping event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "type": "string",
+      "description": "reason of Horn Tipping such as growing a direction, touching the skin and blocking the sight ability"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible Horn Tipping"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Array of toots that used in tipping."
+      }
+    },
+    "length": {
+      "type": "integer",
+      "description": "length that been cut"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

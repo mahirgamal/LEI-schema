@@ -1,0 +1,12 @@
+{
+  "description": "Enumeration for the wean method.",
+  "type": "string",
+  "enum": [
+    "Yard",
+    "Abrupt",
+    "Gradual",
+    "Creep",
+    "Other ",
+    "Unknown"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "description": "Event for recording parturition (calving, lambing, kidding, fawning).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "isEmbryoImplant": {
+      "type": "boolean",
+      "description": "True if the progeny is the result of an embryo implant."
+    },
+    "damParity": {
+      "type": "integer",
+      "description": "The calving, litter, or other parturition number for the dam"
+    },
+    "liveProgeny": {
+      "type": "integer",
+      "description": "The number of live offspring from the parturition. Important if progeny are not identified."
+    },
+    "totalProgeny": {
+      "type": "integer",
+      "description": "The total number of offspring from the parturition, including those born dead."
+    },
+    "calvingEase": {
+    "type": "string",
+      "$ref": "ICAR/enums/icarReproCalvingEaseType.json",
+      "description": "Calving ease (enum corresponds to traditional 1-5 values)."
+    },
+    "progeny": {
+      "type": "array",
+      "items": {
+        "$ref": "ICAR/resources/icarAnimalCoreResource.json"
+      },
+      "description": "List of progeny. May not be fully identified, but recommend that gender and status are supplied at least."
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "eventMode": {
+      "type": "string",
+      "description": "Type of sale or purchase event"
+    },
+    "lot": {
+      "type": "object",
+      "$ref": "leiLotDetailType.json",
+      "description": "Describes the lot details"
+    },
+    "transactionCost": {
+      "type": "object",
+      "$ref": "ISC/types/iscTransactionCostType.json",
+      "description": "provides the..."
+    }
+  }
+}

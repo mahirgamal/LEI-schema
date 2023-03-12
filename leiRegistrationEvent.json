@@ -1,0 +1,30 @@
+{
+  "required": [
+    "registrationReason"
+  ],
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "registrationReason": {
+      "type": "string",
+      "enum": [
+        "Born",
+        "Found",
+        "Registered"
+      ],
+      "description": "Enumeration for registration reason: Born, or Registered (induct existing animal)."
+    },
+    "EID": {
+      "type": "string",
+      "description": "ear tag"
+    },
+    "VID": {
+      "type": "string",
+      "description": "visual tag"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

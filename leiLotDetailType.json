@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "eventReference": {
+      "type": "object",
+      "$ref": "ISC/types/iscTradingEventIdentifierType.json",
+      "description": "Event reference using the scheme and ID method (e.g. auctionsplus.com.au, #15263)."
+    },
+    "lotId": {
+      "type": "string",
+      "description": "Lot Identification number in the sale"
+    },
+    "description": {
+      "type": "string",
+      "description": "Lot description"
+    },
+    "accreditations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "any accreditation's that are applicable to the lot"
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "ICAR/types/icarLocationIdentifierType.json"
+      },
+      "description": "Locations from where the stock are"
+    },
+    "agent": {
+      "type": "object",
+      "$ref": "ISC/types/iscOrganisationType.json",
+      "description": "Agent details for the lot"
+    },
+    "assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "ISC/types/iscLotAssessmentType.json"
+      },
+      "description": "A set of assessments for the animal(s) in the lot."
+    },
+    "sellingBasis": {
+      "$ref": "ISC/types/iscSellingBasisType.json",
+      "description": "Basis on which the stock was sold"
+    }
+  }
+}

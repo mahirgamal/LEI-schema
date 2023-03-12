@@ -1,0 +1,24 @@
+{
+  "description": "This event records an observed reproductive status without necessarily a pregnancy check, parturition, or other event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "observedStatus": {
+    "type": "string",
+      "$ref": "ICAR/enums/icarAnimalStatusType.json",
+      "description": "The reproductive status at the time of observation."
+    },
+    "note": {
+      "type": "string",
+      "description": "note of dry off"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for the treatment"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "description": "The device or software that the event originates from.",
+  "allOf": [
+    {
+      "$ref": "ICAR/resources/icarDeviceResource.json"
+    },
+    {
+      "type": "object",
+      "required": [
+        "ip_address"
+      ],
+      "properties": {
+        "ip_address": {
+          "type": "string",
+          "format": "ipv4",
+          "description": "The IP address of the publishing technology."
+        }
+      }
+    }
+  ]
+}

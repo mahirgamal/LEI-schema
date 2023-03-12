@@ -1,0 +1,14 @@
+{
+  "description": "The data/item owner. It can be cattle producer, crop farmer, or ...",
+  "required": [
+    "id"
+  ],
+  "allOf": [
+    {
+      "$ref": "ISC/types/iscOrganisationType.json"
+    },
+    {
+      "$ref": "ISC/types/iscPersonType.json"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "description": "The age estimation event.",
+  "type": "object",
+  "required": [
+    "age"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "age": {
+      "type": "integer",
+      "description": "estmated age"
+    },
+    "upperTeeth": {
+      "type": "integer",
+      "description": "upper teeth count"
+    },
+    "lowerTeeth": {
+      "type": "integer",
+      "description": "lower teeth count"
+    },
+    "reason": {
+    "type": "string",
+    "description": "reason of aging"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for measuring"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "description": "Resource containing daily averages calculated from milking visit of a single animal",
+  "type": "object",
+  "required": [
+    "location",
+    "animal",
+    "averageDate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "averageDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the average has been calculated."
+    },
+    "milkYieldAvg24h": {
+      "$ref": "ICAR/types/icarTraitAmountType.json",
+      "description": "The average-amount of milk produced within 24h."
+    },
+    "milkYieldAvg7days": {
+      "$ref": "ICAR/types/icarTraitAmountType.json",
+      "description": "The average-amount of milk produced within 7 days."
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

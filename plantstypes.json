@@ -1,0 +1,7 @@
+{
+  "description": "Enumeration for the events name.",
+  "type": "string",
+  "enum": [
+    "tree"
+  ]
+}

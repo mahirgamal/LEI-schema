@@ -1,0 +1,41 @@
+{
+  "description": " stock check",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "stock"
+    ],
+    "properties": {
+      "specie": {
+        "$ref": "ICAR/enums/icarAnimalSpecieType.json",
+        "description": "Species of the animal."
+      },
+      "breed": {
+        "type": "string",
+        "description": "breed type"
+      },
+      "gender": {
+        "$ref": "ICAR/enums/icarAnimalGenderType.json",
+        "description": "Gender of the animal."
+      },
+      "stock": {
+        "type": "integer",
+        "description": " the count number of animales in the yard"
+      },
+      "note": {
+        "type": "string",
+        "description": "any note"
+      },
+      "reason": {
+        "type": "string",
+        "description": "reason of stock check"
+      },
+      "date": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}

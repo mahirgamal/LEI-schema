@@ -1,0 +1,11 @@
+{
+  "description": "Enumeration for the scores name.",
+  "type": "string",
+  "enum": [
+    "Fat",
+    "Condition",
+    "FrameCattle",
+    "FrameSheep",
+    "Muscle"
+  ]
+}

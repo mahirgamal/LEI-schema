@@ -1,0 +1,9 @@
+{
+  "description": "Enumeration for the castration methods.",
+  "type": "string",
+  "enum": [
+    "rings",
+    "Surgical",
+    "Burdizzo bloodless"
+  ]
+}

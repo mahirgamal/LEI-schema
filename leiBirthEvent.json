@@ -1,0 +1,25 @@
+{
+  "description": "Event for recording animal birth",
+  "type": "object",
+  "required": [
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "registrationReason": {
+    "type": "string",
+      "$ref": "ICAR/enums/icarRegistrationReasonType.json"
+    },
+    "EID": {
+      "type": "string",
+      "description": "ear tag"
+    },
+    "VID": {
+      "type": "string",
+      "description": "visual tag"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

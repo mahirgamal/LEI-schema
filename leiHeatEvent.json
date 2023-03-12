@@ -1,0 +1,75 @@
+{
+  "description": "Event for recording heats.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "heatDetectionMethod": {
+    "type": "string",
+      "$ref": "ICAR/enums/icarReproHeatDetectionMethodType.json"
+    },
+    "certainty": {
+    "type": "string",
+      "$ref": "ICAR/enums/icarReproHeatCertaintyType.json"
+    },
+    "expirationDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date Time when the heat will end. ISO8601 date and time. MUST contain time zone. UTC recommended."
+    },
+    "visualDetection": {
+      "type": "object",
+      "description": "Specific info when the heat was visually detected.",
+      "properties": {
+        "heatSigns": {
+          "type": "array",
+          "items": {
+          "type": "string",
+            "$ref": "ICAR/enums/icarReproHeatSignType.json",
+            "description": "Array of heat signs."
+          }
+        },
+        "heatIntensity": {
+        "type": "string",
+          "$ref": "ICAR/enums/icarReproHeatIntensityType.json"
+        }
+      }
+    },
+    "heatReportScrSenseTime": {
+      "type": "object",
+      "description": "Specific info when the heat was detected by SenseTime from SCR",
+      "properties": {
+        "breedingWindow": {
+          "type": "integer",
+          "description": "Number of hours to AI."
+        },
+        "heatIndex": {
+          "type": "integer",
+          "description": "Gives an indication of the certainty of the heat indication."
+        }
+      }
+    },
+    "heatReportNedapCowControl": {
+      "type": "object",
+      "description": "Specific info when the heat was detected by CowControl from NEDAP",
+      "properties": {
+        "expirationDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date Time when the heat will end. ISO8601 date and time. MUST contain time zone. UTC recommended."
+        },
+        "heatChance": {
+          "type": "integer",
+          "description": "Gives an indication of the certainty of the heat indication."
+        }
+      }
+    },
+    "device": {
+      "$ref": "ICAR/types/icarDeviceReferenceType.json",
+      "description": "Optional information about the device used for the measurement."
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

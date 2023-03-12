@@ -1,0 +1,13 @@
+{
+  "description": "Enumeration for the abortion reason.",
+  "type": "string",
+  "enum": [
+    "hormonal",
+    "toxic",
+    "nutritional",
+    "disease",
+    "in purpose",
+    "Unknown",
+    "Other"
+  ]
+}

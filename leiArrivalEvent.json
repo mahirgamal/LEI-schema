@@ -1,0 +1,66 @@
+{
+  "required": [
+    "arrivalReason"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "arrivalReason": {
+      "type": "string",
+      "$ref": "ICAR/enums/icarArrivalReasonType.json",
+      "description": "arrival reason"
+    },
+    "shipment": {
+      "type": "object",
+      "$ref": "ISC/types/iscConsignmentType.json"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "oneOf": [
+      {
+        "required": [
+          "changeOfOwnerShip"
+        ],
+        "properties": {
+          "arrivalReason": {
+            "const": "Purchase"
+          },
+          "changeOfOwnerShip": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "lot": {
+                "type": "object",
+                "$ref": "leiLotDetailType.json",
+                "description": "Describes the lot details"
+              },
+              "transactionCost": {
+                "type": "object",
+                "$ref": "ISC/types/iscTransactionCostType.json",
+                "description": "provides the..."
+              }
+            }
+          }
+        }
+      },
+      {
+        "required": [
+          "changeOfOwnerShip"
+        ],
+        "properties": {
+          "arrivalReason": {
+            "not": {
+              "const": "Purchase"
+            }
+          },
+          "changeOfOwnerShip": {
+            "type": "null",
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  }
+}

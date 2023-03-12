@@ -1,0 +1,47 @@
+{
+  "description": "Description of the process of coordinating the reproductive cycles of a female cattle.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "insertionDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO8601 date and time. MUST contain time zone. UTC recommended."
+    },
+    "id": {
+      "type": "string",
+      "description": "Synchronisation device ID or serial number"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Synchronisation device brand"
+    },
+    "hormone": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "leiHormonesType.json"
+      }
+    },
+    "note": {
+      "type": "string",
+      "description": "note for the synchronisation device"
+    },
+    "withdrawals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "ISC/types/iscWithdrawalType.json"
+      },
+      "description": "Provides withholding details for the insemination"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for the insertion synchronisation device"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "description": "The abortion event records an observation that an abortion has taken place.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "type": "string",
+      "$ref": "leiAbortionReasonTypes.json",
+      "description": "reason of miscarriage"
+    },
+    "method": {
+      "type": "string",
+      "$ref": "leiAbortionMethodTypes.json",
+      "description": "method/way of miscarriage"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

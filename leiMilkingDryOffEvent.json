@@ -1,0 +1,27 @@
+{
+  "description": "Records that the animal has been dried off from milking. If necessary, also record a separate health treatment event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "type": "string",
+      "description": "reason of dry off"
+    },
+    "note": {
+      "type": "string",
+      "description": "note of dry off"
+    },
+    "period": {
+      "type": "integer",
+      "description": "period of dry off"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for the treatment"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

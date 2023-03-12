@@ -1,0 +1,42 @@
+{
+	"description": "Identify the location of an animal by its tag device or a producer.",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"location"
+	],
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "Unique identifier on location level in the source system for this device."
+		},
+		"serial": {
+			"type": "string",
+			"description": "Optionally, the serial number of the device."
+		},
+		"version": {
+			"type": "string",
+			"description": "Optionally, version of the device."
+		},
+		"manufacturer": {
+			"$ref": "ICAR//types/icarDeviceManufacturerType.json",
+			"description": "Optionally, the device data as defined by the manufacturer."
+		},
+		"paddock": {
+			"type": "string",
+			"description": "paddock number where the animal is now"
+		},
+		"location": {
+			"type": "array",
+			"items": {
+				"$ref": "ICAR/types/icarLocationIdentifierType.json"
+			},
+			"description": "location of the animal."
+		},
+		"Geolocation": {
+			"type": "object",
+			"$ref": "leiGeoType.json",
+			"description": "Geo location of the animal."
+		}
+	}
+}

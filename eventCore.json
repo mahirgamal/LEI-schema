@@ -1,0 +1,592 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "classpath:/json/LEI/eventCore.json",
+  "type": "object",
+  "description": "event core json schema",
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "owner",
+    "eventDateTime",
+    "message"
+  ],
+  "properties": {
+    "source": {
+      "$ref": "eventSource.json"
+    },
+    "owner": {
+      "$ref": "eventOwnerType.json",
+      "description": "details of the owner"
+    },
+    "message": {
+      "required": [
+        "eventName",
+        "item",
+        "event"
+      ],
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "if": {
+          "properties": {
+            "properties.item.properties.itemType": {
+              "const": "Crop"
+            }
+          }
+        },
+        "then": {
+          "eventName": {
+            "$ref": "plantstypes.json"
+          }
+        },
+        "else": {
+          "if": {
+            "properties": {
+              "properties.item.properties.itemType": {
+                "const": "Animal"
+              }
+            }
+          },
+          "then": {
+            "eventName": {
+              "$ref": "leiEventsTypes.json"
+            }
+          },
+          "else": {
+            "if": {
+              "properties": {
+                "properties.item.properties.itemType": {
+                  "const": "Machinery"
+                }
+              }
+            },
+            "then": {
+              "eventName": {
+                "$ref": "abc.json"
+              }
+            }
+          }
+        },
+        "item": {
+          "$ref": "itemType.json",
+          "description": "Unique animal,crop, machinery, or ... scheme and identifier combination."
+        },
+        "session": {
+          "type": "object",
+          "description": "session details",
+          "additionalProperties": false,
+          "properties": {
+            "sessionID": {
+              "type": "string",
+              "description": "random number"
+            },
+            "totalInSession": {
+              "type": "integer",
+              "description": "total of rfid per pic",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "sessionID",
+            "totalInSession"
+          ]
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Weight"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiWeightEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Score"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiScoreEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Arrival"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiArrivalEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Departure"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiDepartureEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Death"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiDeathEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Registration"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiRegistrationEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Retag"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiRetagEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Treatmentprogram"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiTreatmentProgramEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Treatment"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiTreatmentEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Diagnosis"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiDiagnosisEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "DailyMilkingAverages"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiDailyMilkingAveragesEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "FeedIntake"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiFeedIntakeEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "MilkingDryOff"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiMilkingDryOffEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "MilkingVisit"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiMilkingVisitEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Abortion"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiAbortionEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Heat"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiHeatEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Insemination"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiInseminationEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Parturition"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiParturitionEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "PregnancyCheck"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiPregnancyCheckEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "SemenStraw"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiSemenStrawEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "StatusObserved"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiStatusObservedEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "LactationStatusObserved"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiLactationStatusObservedEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Birth"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiBirthEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Synchronisation"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiSynchronisationEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Weaning"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiWeaningEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Audit"
+            },
+            "event": {
+              "$ref": "leiAuditEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Castrate"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiCastrateEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "PulseCheck"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiPulseCheckEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Respiration"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiRespirationEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "FindAgeByDentition"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiFindAgeByDentitionEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "HoofTrimming"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiHoofTrimmingEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "HornTipping"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiHornTippingEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Location"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiLocationEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "Dehorning"
+            },
+            "event": {
+              "type": "object",
+              "$ref": "leiDehorningEvent.json"
+            }
+          }
+        },
+        {
+          "required": [
+            "event"
+          ],
+          "properties": {
+            "eventName": {
+              "const": "tree"
+            },
+            "event": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "eventDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO8601 date and time. MUST contain time zone. UTC recommended."
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "description": "The Respiration Check event.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "rate": {
+      "type": "integer",
+      "description": "per minute, watching the cow's ribs, count the number of times they move out on inspiration in 15 seconds and then multiply by 4."
+    },
+    "reason": {
+    "type": "string",
+    "description": "reason of measuring"
+    },
+    "note": {
+      "type": "string",
+      "description": "any note"
+    },
+    "responsible": {
+      "type": "string",
+      "description": "Person responsible for measuring"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

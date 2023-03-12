@@ -1,0 +1,13 @@
+{
+  "description": "Core schema for representing animal",
+
+    
+      "type": "object", 
+      "required":["xyz"],    
+      "properties": {
+        "xyz": {
+          "type": "string",
+          "description": "The identifier used by the farmer in day to day operations. In many cases this could be the animal number."
+        }
+      }
+    }
