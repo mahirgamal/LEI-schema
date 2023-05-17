@@ -33,7 +33,7 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
     Session property, sometimes in a period one type of event can occur to many animals for example weight event, it can happen for 50 animals on the same date which means that in the specific session the weight event occurs to 50 animals.
     oneOf is the core of the event, it has many properties and one of them will be chosen according to the value of the event property. It has 2 mandatory properties: the date of the event that happened and the RFID related to the animal who did the event or the event done on it.
 
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/e03b8126-4bb0-4add-810e-6fd6e3aecc4b)
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/6c40ba67-65b0-4fd1-b94c-290ddcd810e7)
 
 # Event Date Time
 ●	eventDateTime: is the time stamp that the event has been published to the subscriber to consume it.
