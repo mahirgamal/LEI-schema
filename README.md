@@ -6,18 +6,20 @@ The LEI will be extended from the ICAR and ISC schema as there are some fields n
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/e3595ecc-e04f-437c-b695-6eb75a710b79)
 
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/15cf61ec-66bb-4c52-9c6d-2e42e25c634d)
+
+
 
 # Source
 Which is shown from where this event is coming, is it coming from the sensor, NLIS system, or anything else that can send an event and the location. The mandatory property is “from”.
 
 "source": {
-"from": “optiweigh”,
-        "ip_address": “196.10.10.11”,
-      	"source_id": 142,
-        "source_name":”CSU”,
-        "gpsLat": -35.0458,
-        "gpsLong": 147.3069
-}
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  }
 
 # Message
 
@@ -27,7 +29,7 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
     Session property, sometimes in a period one type of event can occur to many animals for example weight event, it can happen for 50 animals on the same date which means that in the specific session the weight event occurs to 50 animals.
     oneOf is the core of the event, it has many properties and one of them will be chosen according to the value of the event property. It has 2 mandatory properties: the date of the event that happened and the RFID related to the animal who did the event or the event done on it.
 
-![image](https://user-images.githubusercontent.com/86919381/165871184-0791c12b-5ed6-43da-8130-09abb7e86873.png)
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/e03b8126-4bb0-4add-810e-6fd6e3aecc4b)
 
 # Event Date Time
 ●	eventDateTime: is the time stamp that the event has been published to the subscriber to consume it.
