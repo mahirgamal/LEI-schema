@@ -46,7 +46,7 @@ If you encounter any issues or have questions, feel free to [contact us](#Contac
 
 ## Team
 
-Meet the dedicated team behind LEI2JSON:
+Meet the dedicated team behind LEI:
 
 - [**Mahir Habib**](https://researchoutput.csu.edu.au/en/persons/mahir-habib) - (PhD Student)
 - [**Ashad Kabir**](https://researchoutput.csu.edu.au/en/persons/akabircsueduau) - Associate Professor in Computer Science (Project Lead and Principal Supervisor)
@@ -66,8 +66,4 @@ This project is licensed under Apache License 2.0 - see the [LICENSE][lic] file 
 If you have any questions, suggestions or need assistance, please don't hesitate to contact us at mhabib@csu.edu.au, akabir@csu.edu.au.
 
 [//]: #
-  [LEI2JSON]:  <https://docs.google.com/spreadsheets/d/1bY8gVCLbVUoGXgYd5DosBFXTjOZqGR4kK8yUstpqIBs/edit#gid=0>
-  [lic]: <https://github.com/mahirgamal/LEI2JSON/blob/main/LICENSE>
-  [html]: <https://github.com/mahirgamal/LEI2JSON/blob/main/src/Page.html>
-  [JavaScript]: <https://github.com/mahirgamal/LEI2JSON/blob/main/src/Code.gs>
- 
+  [lic]: <https://github.com/mahirgamal/LEI-schema/blob/main/LICENSE>
