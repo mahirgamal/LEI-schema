@@ -66,4 +66,4 @@ This project is licensed under Apache License 2.0 - see the [LICENSE][lic] file 
 If you have any questions, suggestions or need assistance, please don't hesitate to contact us at mhabib@csu.edu.au, akabir@csu.edu.au.
 
 [//]: #
-  [lic]: <https://github.com/mahirgamal/LEI-schema/blob/main/LICENSE>
+  [lic]: <https://github.com/mahirgamal/LEI-schema/main/LICENSE>
