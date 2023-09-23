@@ -4,10 +4,19 @@ The LEI will be extended from the ICAR and ISC schema as there are some fields n
 
 # LEI structure
 
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/e3595ecc-e04f-437c-b695-6eb75a710b79)
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/dc10e33b-a65e-4b49-b669-61d54b2d90de)
 
+# Schema Mandatory Information (ICAR and ISC limitations)
 
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a921a9d5-89ff-4513-be56-a251e5c5271c)
+| Information                                      | ICAR   | ISC    | Note                                                           |
+|--------------------------------------------------|--------|--------|----------------------------------------------------------------|
+| `datetime`: "When?"                             | ✅     | ✅     | Events capture date and time.                                |
+| `source`: "Where?"                              | ❌     | ❌     | In ICAR/ISC, there are not many details about the source of the event, for example, GPS location details for the device that triggered the event, device brand, or the company name. |
+| `owner`: "Who?"                                 | ❌     | ❌     | The ICAR/ISC has no specific field for identifying the animal owner. Although it does have fields for organisations and people, these are not used to indicate the owner of an animal. |
+| `message`: "What?"                              |        |        |                                                                |
+|   - `item`: "Which?"                            | ✅     | ✅     | Animal details include identification number or tag number, date of birth, breed information, and gender. |
+|   - `event`: "Why?"                            | ✅     | ✅     | The details about the event include the animal's health and vaccination history, feeding regimen and nutrition information, weight or body condition score, information about any treatments (such as antibiotics or hormones) that the animal has received, and production data (such as milk yield or meat quality). |
+
 
 # Event JSON File (eventCore.json)
 The "eventCore.json" file is a crucial component in the organisation of data within the proposed data schema. It serves as the central hub that connects all properties and events sub-schemas together, allowing for a cohesive and consistent structure for data validation. This file is the actual JSON schema, meaning it defines the structure and format of the data being processed. It outlines the various fields and their respective data types, as well as any constraints or validation rules that must be met.
@@ -54,11 +63,13 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
 ## Message
 
 - **eventName Property:** This property is crucial as it defines what the event is about. Depending on the value of the "eventName" property, specific actions or properties will be selected from the "oneOf" section. In essence, "eventName" serves as a descriptor or label for the nature of the event.
-- **Producer Property:** The "Producer" property encompasses several sub-properties that collectively define the details of the farm or producer. These sub-properties include the Property Identification Code (PIC) for the farm, owner name, email, address, and phone number. Essentially, it provides information about the entity responsible for the event data.
 - **Session Property:** In certain scenarios, multiple animals may experience the same type of event within a specific period. For instance, the "weight" event might occur for 50 animals on the same date. The "session" property is used to group such events together, indicating that these events happened within the same session or timeframe. It helps in organizing and categorizing events that occur simultaneously for multiple entities.
 - **oneOf Property:** This property is central to the event data structure. It contains multiple sub-properties, and one of them will be selected based on the value of the "event" property. The "oneOf" section defines different possibilities or variations of event data. It ensures that the event data is properly categorized and structured based on the nature of the event.
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/6c40ba67-65b0-4fd1-b94c-290ddcd810e7)
+
+## Owner Property
+The "Owner" property encompasses several sub-properties that collectively define the details of the farm or producer. These sub-properties include the Property Identification Code (PIC) for the farm, owner name, email, address, and phone number. Essentially, it provides information about the entity responsible for the event data.
 
 ## Event Date Time
 - **eventDateTime:** is the time stamp that the event has been published to the subscriber to consume it.
