@@ -9,35 +9,6 @@ The LEI will be extended from the ICAR and ISC schema as there are some fields n
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a921a9d5-89ff-4513-be56-a251e5c5271c)
 
-
-
-
-# Source
-Which is shown from where this event is coming, is it coming from the sensor, NLIS system, or anything else that can send an event and the location. The mandatory property is “from”.
-
-"source": {
-    "id": "123",
-    "ip_address": "128.0.0.0",
-    "manufacturer": {
-      "id": "1234"
-    }
-  }
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/06082e10-2009-427c-905c-e91988674452)
-
-
-# Message
-
-●	Message: it contains the actual event details. 
-    eventName property value to define what is the event about and according to this value, we must choose one of the properties in the “oneOf “section.
-    Producer property contains many other properties to define the Property Identification Code (PIC) for that farm, owner name, email, address, and phone number.
-    Session property, sometimes in a period one type of event can occur to many animals for example weight event, it can happen for 50 animals on the same date which means that in the specific session the weight event occurs to 50 animals.
-    oneOf is the core of the event, it has many properties and one of them will be chosen according to the value of the event property. It has 2 mandatory properties: the date of the event that happened and the RFID related to the animal who did the event or the event done on it.
-
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/6c40ba67-65b0-4fd1-b94c-290ddcd810e7)
-
-# Event Date Time
-●	eventDateTime: is the time stamp that the event has been published to the subscriber to consume it.
-
 # Event JSON File (eventCore.json)
 The "eventCore.json" file is a crucial component in the organisation of data within the proposed data schema. It serves as the central hub that connects all properties and events sub-schemas together, allowing for a cohesive and consistent structure for data validation. This file is the actual JSON schema, meaning it defines the structure and format of the data being processed. It outlines the various fields and their respective data types, as well as any constraints or validation rules that must be met.
 
@@ -67,7 +38,30 @@ The "message" property employs the "oneOf" keyword to define various options for
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
 
+## Source
+Which is shown from where this event is coming, is it coming from the sensor, NLIS system, or anything else that can send an event and the location. The mandatory property is “from”.
 
+"source": {
+    "id": "123",
+    "ip_address": "128.0.0.0",
+    "manufacturer": {
+      "id": "1234"
+    }
+  }
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/06082e10-2009-427c-905c-e91988674452)
+
+
+## Message
+
+- **eventName Property:** This property is crucial as it defines what the event is about. Depending on the value of the "eventName" property, specific actions or properties will be selected from the "oneOf" section. In essence, "eventName" serves as a descriptor or label for the nature of the event.
+- **Producer Property:** The "Producer" property encompasses several sub-properties that collectively define the details of the farm or producer. These sub-properties include the Property Identification Code (PIC) for the farm, owner name, email, address, and phone number. Essentially, it provides information about the entity responsible for the event data.
+- **Session Property:** In certain scenarios, multiple animals may experience the same type of event within a specific period. For instance, the "weight" event might occur for 50 animals on the same date. The "session" property is used to group such events together, indicating that these events happened within the same session or timeframe. It helps in organizing and categorizing events that occur simultaneously for multiple entities.
+- **oneOf Property:** This property is central to the event data structure. It contains multiple sub-properties, and one of them will be selected based on the value of the "event" property. The "oneOf" section defines different possibilities or variations of event data. It ensures that the event data is properly categorized and structured based on the nature of the event.
+
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/6c40ba67-65b0-4fd1-b94c-290ddcd810e7)
+
+## Event Date Time
+- **eventDateTime:** is the time stamp that the event has been published to the subscriber to consume it.
 
 
 # Troubleshooting
