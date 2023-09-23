@@ -41,10 +41,16 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
 # Event JSON File (eventCore.json)
 The "eventCore.json" file is a crucial component in the organisation of data within the proposed data schema. It serves as the central hub that connects all properties and events sub-schemas together, allowing for a cohesive and consistent structure for data validation. This file is the actual JSON schema, meaning it defines the structure and format of the data being processed. It outlines the various fields and their respective data types, as well as any constraints or validation rules that must be met.
 
-## Troubleshooting
+## Central Hub
+"eventCore.json" serves as a central hub that connects various properties and events sub-schemas. It eliminates the need to validate data against each individual event sub-schema, making data validation more efficient.
+
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
+
+
+# Troubleshooting
 If you encounter any issues or have questions, feel free to [contact us](#Contact).
 
-## Team
+# Team
 
 Meet the dedicated team behind LEI:
 
@@ -52,17 +58,17 @@ Meet the dedicated team behind LEI:
 - [**Ashad Kabir**](https://researchoutput.csu.edu.au/en/persons/akabircsueduau) - Associate Professor in Computer Science (Project Lead and Principal Supervisor)
 - [**Lihong Zheng**](https://researchoutput.csu.edu.au/en/persons/lzhengcsueduau) - Associate Professor in Computer Science (Co-supervisor)
 
-## Contributing
+# Contributing
 If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
-## Acknowledgments
+# Acknowledgments
 We acknowledge that this work is supported by the Trakka project and TerraCipher. We appreciate the support and resources provided by the Trakka project team. Also, we thank Dave Swain and Will Swain from TerraCipher for their guidance and assistance throughout **LEI**.
 
 
-## License
+# License
 This project is licensed under Apache License 2.0 - see the [LICENSE][lic] file for details.
 
-## Contact
+# Contact
 If you have any questions, suggestions or need assistance, please don't hesitate to contact us at mhabib@csu.edu.au, akabir@csu.edu.au.
 
 [//]: #
