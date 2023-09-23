@@ -46,25 +46,21 @@ The "eventCore.json" file is a crucial component in the organisation of data wit
 
 ## Structure of "eventCore.json":
 
-- **$schema and $id:**
+- **$schema and $id:** These fields specify the version of the JSON schema being used and the location of the schema file, respectively.
 
-These fields specify the version of the JSON schema being used and the location of the schema file, respectively.
+- **type:** It is set to "object," indicating that this schema defines an object with various properties.
 
-- **type:**
+- **description:** Provides a brief explanation of what the schema represents.
 
-It is set to "object," indicating that this schema defines an object with various properties.
+- **additionalProperties:** Set to "false," which means that no additional properties beyond those defined in the "properties" field can be added to the object.
 
-- **description:**
+- **required:** Lists the properties that must be present in the event object, including "source," "owner," "eventDateTime," and "message." These properties are foundational.
 
-Provides a brief explanation of what the schema represents.
+## Properties in "eventCore.json":
 
-- **additionalProperties:**
-
-Set to "false," which means that no additional properties beyond those defined in the "properties" field can be added to the object.
-
-- **required:**
-
-Lists the properties that must be present in the event object, including "source," "owner," "eventDateTime," and "message." These properties are foundational.
+- **"source"** property references an external JSON file "eventSource.json" for hardware or software details.
+- **"owner"** property references "eventOwnerType.json" for information about the producer or farmer.
+- **"message"** property is a complex object with specific properties, including "eventName," "item," "event," and optional "session."
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
 
