@@ -42,7 +42,7 @@ The "eventCore.json" file is a crucial component in the organisation of data wit
 
 ### Event Date Time
 - **eventDateTime:** is the time stamp that the event has been published to the subscriber to consume it.
-- 
+
 ### Source
 Which is shown from where this event is coming, is it coming from the sensor, NLIS system, or anything else that can send an event and the location. The mandatory property is “from”.
 
