@@ -24,6 +24,8 @@ The "eventCore.json" file is a crucial component in the organisation of data wit
 ## Central Hub
 "eventCore.json" serves as a central hub that connects various properties and events sub-schemas. It eliminates the need to validate data against each individual event sub-schema, making data validation more efficient.
 
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
+
 ## Structure of "eventCore.json"
 
 - **$schema and $id:** These fields specify the version of the JSON schema being used and the location of the schema file, respectively.
@@ -73,8 +75,6 @@ The "Owner" property encompasses several sub-properties that collectively define
 - The structure and properties of the "animal" object are referenced from an external file "icarAnimalCoreResource.json" using "$ref."
 #### "oneOf" Keyword
 The "message" property employs the "oneOf" keyword to define various options for the "eventName" property based on different conditions. For example, if "eventName" is "Weight," it specifies that "event" must be an object, and the required definition is found in an external JSON file "leiWeightEvent.json."
-
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
 
 
 # Troubleshooting
