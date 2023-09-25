@@ -33,21 +33,15 @@ The "eventCore.json" file is a crucial component in the organisation of data wit
 - **required:** Lists the properties that must be present in the event object, including "source," "owner," "eventDateTime," and "message." These properties are foundational.
 
 ## Properties in "eventCore.json"
-
+- **eventDateTime**
 - **"source"** property references an external JSON file "eventSource.json" for hardware or software details.
 - **"owner"** property references "eventOwnerType.json" for information about the producer or farmer.
 - **"message"** property is a complex object with specific properties, including "eventName," "item," "event," and optional "session."
 
-## Complex "message" Property
-- It contains "if-then-else" statements to check the value of the "itemType" field.
-- Depending on the "itemType," the "eventName" can only be selected from specific JSON files.
-- The structure and properties of the "animal" object are referenced from an external file "icarAnimalCoreResource.json" using "$ref."
-### "oneOf" Keyword
-The "message" property employs the "oneOf" keyword to define various options for the "eventName" property based on different conditions. For example, if "eventName" is "Weight," it specifies that "event" must be an object, and the required definition is found in an external JSON file "leiWeightEvent.json."
-
-![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
-
-## Source
+### Event Date Time
+- **eventDateTime:** is the time stamp that the event has been published to the subscriber to consume it.
+- 
+### Source
 Which is shown from where this event is coming, is it coming from the sensor, NLIS system, or anything else that can send an event and the location. The mandatory property is “from”.
 
 "source": {
@@ -59,8 +53,10 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
   }
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/06082e10-2009-427c-905c-e91988674452)
 
+### Owner Property
+The "Owner" property encompasses several sub-properties that collectively define the details of the farm or producer. These sub-properties include the Property Identification Code (PIC) for the farm, owner name, email, address, and phone number. Essentially, it provides information about the entity responsible for the event data.
 
-## Message
+### Message
 
 - **eventName Property:** This property is crucial as it defines what the event is about. Depending on the value of the "eventName" property, specific actions or properties will be selected from the "oneOf" section. In essence, "eventName" serves as a descriptor or label for the nature of the event.
 - **Session Property:** In certain scenarios, multiple animals may experience the same type of event within a specific period. For instance, the "weight" event might occur for 50 animals on the same date. The "session" property is used to group such events together, indicating that these events happened within the same session or timeframe. It helps in organizing and categorizing events that occur simultaneously for multiple entities.
@@ -71,11 +67,14 @@ Which is shown from where this event is coming, is it coming from the sensor, NL
 
 ![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/6c40ba67-65b0-4fd1-b94c-290ddcd810e7)
 
-## Owner Property
-The "Owner" property encompasses several sub-properties that collectively define the details of the farm or producer. These sub-properties include the Property Identification Code (PIC) for the farm, owner name, email, address, and phone number. Essentially, it provides information about the entity responsible for the event data.
+#### Complex "message" Property
+- It contains "if-then-else" statements to check the value of the "itemType" field.
+- Depending on the "itemType," the "eventName" can only be selected from specific JSON files.
+- The structure and properties of the "animal" object are referenced from an external file "icarAnimalCoreResource.json" using "$ref."
+#### "oneOf" Keyword
+The "message" property employs the "oneOf" keyword to define various options for the "eventName" property based on different conditions. For example, if "eventName" is "Weight," it specifies that "event" must be an object, and the required definition is found in an external JSON file "leiWeightEvent.json."
 
-## Event Date Time
-- **eventDateTime:** is the time stamp that the event has been published to the subscriber to consume it.
+![image](https://github.com/mahirgamal/LEI-schema/assets/86919381/a4a05312-e8e5-4d0a-bda2-64222e488d6e)
 
 
 # Troubleshooting
