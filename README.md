@@ -76,28 +76,6 @@ The "Owner" property encompasses several sub-properties that collectively define
 #### "oneOf" Keyword
 The "message" property employs the "oneOf" keyword to define various options for the "eventName" property based on different conditions. For example, if "eventName" is "Weight," it specifies that "event" must be an object, and the required definition is found in an external JSON file "leiWeightEvent.json."
 
-## Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@article{HABIB2024108874,
-  title     = {LEI: Livestock Event Information schema for enabling data sharing},
-  journal   = {Computers and Electronics in Agriculture},
-  volume    = {220},
-  pages     = {108874},
-  year      = {2024},
-  issn      = {0168-1699},
-  doi       = {https://doi.org/10.1016/j.compag.2024.108874},
-  url       = {https://www.sciencedirect.com/science/article/pii/S0168169924002655},
-  author    = {Mahir Habib and Muhammad Ashad Kabir and Lihong Zheng and Shawn McGrath},
-}
-
-Or:
-
-**Habib, M., Kabir, M.A., Zheng, L., & McGrath, S. (2024). _LEI: Livestock Event Information schema for enabling data sharing_. Computers and Electronics in Agriculture, 220, 108874. [https://doi.org/10.1016/j.compag.2024.108874](https://doi.org/10.1016/j.compag.2024.108874)**
-
-
 # Troubleshooting
 If you encounter any issues or have questions, feel free to [contact us](#Contact).
 
@@ -121,6 +99,27 @@ This project is licensed under Apache License 2.0 - see the [LICENSE][lic] file 
 
 # Contact
 If you have any questions, suggestions or need assistance, please don't hesitate to contact us at mhabib@csu.edu.au, akabir@csu.edu.au.
+
+## Citation
+
+If you use this project in your research, please cite:
+
+```bibtex
+@article{HABIB2024108874,
+  title     = {LEI: Livestock Event Information schema for enabling data sharing},
+  journal   = {Computers and Electronics in Agriculture},
+  volume    = {220},
+  pages     = {108874},
+  year      = {2024},
+  issn      = {0168-1699},
+  doi       = {https://doi.org/10.1016/j.compag.2024.108874},
+  url       = {https://www.sciencedirect.com/science/article/pii/S0168169924002655},
+  author    = {Mahir Habib and Muhammad Ashad Kabir and Lihong Zheng and Shawn McGrath},
+}
+
+Or:
+
+**Habib, M., Kabir, M.A., Zheng, L., & McGrath, S. (2024). _LEI: Livestock Event Information schema for enabling data sharing_. Computers and Electronics in Agriculture, 220, 108874. [https://doi.org/10.1016/j.compag.2024.108874](https://doi.org/10.1016/j.compag.2024.108874)**
 
 [//]: #
   [lic]: <https://github.com/mahirgamal/LEI-schema/blob/main/LICENSE.txt>
