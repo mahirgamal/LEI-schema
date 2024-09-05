@@ -116,6 +116,7 @@ If you use this project in your research, please cite:
   url       = {https://www.sciencedirect.com/science/article/pii/S0168169924002655},
   author    = {Mahir Habib and Muhammad Ashad Kabir and Lihong Zheng and Shawn McGrath},
 }
+```
 
 Or:
 
