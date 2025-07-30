@@ -84,8 +84,8 @@ If you encounter any issues or have questions, feel free to [contact us](#Contac
 Meet the dedicated team behind LEI:
 
 - [**Mahir Habib**](https://researchoutput.csu.edu.au/en/persons/mahir-habib) - (PhD Student)
-- [**Ashad Kabir**](https://researchoutput.csu.edu.au/en/persons/akabircsueduau) - Associate Professor in Computer Science (Project Lead and Principal Supervisor)
-- [**Lihong Zheng**](https://researchoutput.csu.edu.au/en/persons/lzhengcsueduau) - Associate Professor in Computer Science (Co-supervisor)
+- [**Ashad Kabir**](https://researchoutput.csu.edu.au/en/persons/akabircsueduau) - Professor in Computer Science (Project Lead and Principal Supervisor)
+- [**Lihong Zheng**](https://researchoutput.csu.edu.au/en/persons/lzhengcsueduau) - Professor in Computer Science (Co-supervisor)
 
 # Contributing
 If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
